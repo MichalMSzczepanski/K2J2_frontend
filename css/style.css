@@ -192,21 +192,25 @@
     font-size: 4.5em;
 }
 
-/* BADANIA KLINICZNE */
+/* BACKGROUND GRAPHIC */
 
-/* solution for line behind copy http://jsfiddle.net/ericrasch/jAXXA */
+.background-graphic {
+    background-image: url(/img/pattern.png);
+    background-repeat: repeat;
+}
 
-.badania-kliniczne h2 {
+/* CLINICAL TRIALS */
+
+.clinical-trials h2 {
     font: normal normal bold 2em Merriweather;
     color: #374F5D;
-    margin-top: 35px;
     position: relative;
     text-align: center;
     z-index: 1;
-    margin-top:55px;
+    margin-top: 55px;
 }
 
-.badania-kliniczne h2:before {
+.clinical-trials h2:before {
     border-top: 2px solid #dfdfdf;
     content: "";
     margin: 0 auto;
@@ -219,19 +223,19 @@
     z-index: -1;
 }
 
-.badania-kliniczne h2 span {
+.clinical-trials h2 span {
     font: normal normal bold 1em Merriweather;
     background: #fff;
     padding: 0 15px;
 }
 
-.badania {
+.trials {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.badanie-przyklad {
-    height: 200px;
+.trial-example {
+    height: 150px;
     width: 250px;
     display: flex;
     flex-direction: row;
@@ -239,14 +243,14 @@
     justify-content: flex-start;
 }
 
-.badanie-przyklad-icon {
+.trial-example-icon {
     margin-left: 15px;
     margin-right: 20px;
     width: max-content;
     height: auto;
 }
 
-.badanie-przyklad p {
+.trial-example p {
     font: normal normal bold 18px Merriweather;
 }
 
@@ -266,9 +270,105 @@
     transform: rotate(90deg);
 }
 
-/* O NAS */
+/* ABOUT US */
 
-/* NASZE PLACOWKI */
+.about-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.map {
+    width: 45%;
+}
+
+.about-us-description {
+    width: 45%;
+}
+
+.about-us-description h3 {
+    font: normal normal bold 18px Lato;
+    color: #5BB7DE;
+    border-bottom: 1px solid #374F5D;
+    width: 100%;
+}
+
+.company-mention {
+    font: normal normal bold 18px Merriweather;
+}
+
+/* OUR LOCATIONS */
+
+.our-locations {
+    padding-bottom: 50px;
+}
+
+.our-locations h2 {
+    font: normal normal bold 2em Merriweather;
+    color: #374F5D;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    margin-top: 55px;
+    margin-bottom: 40px;
+}
+
+.our-locations h2:before {
+    border-top: 2px solid #dfdfdf;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    z-index: -1;
+}
+
+.our-locations h2 span {
+    font: normal normal bold 1em Merriweather;
+    background: #fff;
+    padding: 0 15px;
+}
+
+.locations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box-shadow-parent {
+    position: relative;
+}
+
+.box-shadow {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background-color: #5BB7DE;
+    top: 85px;
+    right: -6px;
+    z-index: -1;
+
+}
+
+.location-example-img {
+    margin-bottom: 25 px;
+}
+
+.location-example p {
+    font: normal normal bold 1.2em Merriweather;
+    color: #374F5D;
+    line-height: 1.5em;
+    margin-left: 7px;
+    margin-top: 15px;
+}
 
 /* FOOTER */
 
@@ -299,7 +399,7 @@
 .footer-right {
     width: 50%;
     height: 100%;
-    display:flex;
+    display: flex;
     justify-content: flex-end;
 }
 
@@ -307,4 +407,3 @@
     width: 25px;
     margin: 13px 5px 10px 5px;
 }
-
