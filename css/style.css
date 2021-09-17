@@ -8,7 +8,9 @@
     width: 1116px;
 }
 
-/* NAVIGATION */
+/* 
+NAVIGATION
+ */
 
 .nav {
     height: 51px;
@@ -75,7 +77,9 @@
     margin-left: 25px;
 }
 
-/* MENU */
+/* 
+MENU
+ */
 
 .menu {
     height: 100px;
@@ -265,12 +269,14 @@ ul {
     display: none;
 }
 
-/* HEADER */
+/* 
+HEADER
+ */
 
 .header {
     background-image: url(../img/header_v2.png);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     height: 526px;
 }
 
@@ -300,18 +306,19 @@ ul {
     display: none;
 }
 
-/* .header .blue-btn {
-    display:none;
-} */
 
-/* BACKGROUND GRAPHIC */
+/* 
+BACKGROUND GRAPHIC
+ */
 
 .background-graphic {
     background-image: url(../img/pattern.png);
     background-repeat: repeat;
 }
 
-/* CLINICAL TRIALS */
+/* 
+CLINICAL TRIALS
+ */
 
 .clinical-trials h2 {
     font: normal normal bold 2em Merriweather;
@@ -392,7 +399,9 @@ ul {
     display: none;
 }
 
-/* ABOUT US */
+/* 
+ABOUT US
+ */
 
 .about-us {
     display: flex;
@@ -424,7 +433,14 @@ ul {
     color: #374F5D;
 }
 
-/* OUR LOCATIONS */
+.about-us-description-mobile {
+    display: none;
+}
+
+
+/* 
+OUR LOCATIONS
+ */
 
 .our-locations {
     padding-bottom: 50px;
@@ -493,7 +509,17 @@ ul {
     margin-top: 15px;
 }
 
-/* FOOTER */
+/* 
+MOBILE CONTACT SECTION
+ */
+
+.mobile-contact-section {
+    display: none;
+}
+
+/* 
+FOOTER
+ */
 
 .footer {
     height: 60px;
@@ -544,13 +570,17 @@ XXXXXXXXXXXXXX MOBILE VERSION XXXXXXXXXXXXX
         width: 390px;
     }
 
-/* NAVIGATION */
+/* 
+NAVIGATION
+ */
 
     .nav {
         display: none;
     }
 
-/* MENU */
+/* 
+MENU
+ */
 
     .menu {
         height: 61px;
@@ -577,7 +607,9 @@ XXXXXXXXXXXXXX MOBILE VERSION XXXXXXXXXXXXX
         color: #5BB7DE
     }
 
-/* HEADER */
+/* 
+HEADER
+ */
 
     .header-content {
         display: flex;
@@ -606,7 +638,9 @@ XXXXXXXXXXXXXX MOBILE VERSION XXXXXXXXXXXXX
     }
 
 
-/* CLINICAL TRIALS */
+/* 
+CLINICAL TRIALS
+ */
 
 
     .clinical-trials h2 {
@@ -650,7 +684,7 @@ XXXXXXXXXXXXXX MOBILE VERSION XXXXXXXXXXXXX
         width: 15px;
         height: 15px;
         border-radius: 50%;
-        
+
     }
 
     .pagination span.active {
@@ -668,10 +702,12 @@ XXXXXXXXXXXXXX MOBILE VERSION XXXXXXXXXXXXX
         border-radius: 50%;
     }
 
-/* ABOUT US */
+/* 
+ABOUT US
+ */
 
     .about-us {
-        flex-direction: column;        
+        flex-direction: column;
     }
 
     .about-us-description {
@@ -679,6 +715,7 @@ XXXXXXXXXXXXXX MOBILE VERSION XXXXXXXXXXXXX
     }
 
     .about-us-description-mobile {
+        display: block;
         margin-top: 2px;
         width: 85%;
     }
@@ -700,29 +737,98 @@ XXXXXXXXXXXXXX MOBILE VERSION XXXXXXXXXXXXX
         width: 90%;
     }
 
-    * OUR LOCATIONS */
+/* 
+OUR LOCATIONS
+ */
 
+    .our-locations h2 {
+        font: normal normal bold 1.5em Merriweather;
 
-/* OUR LOCATIONS */
+    }
 
-.our-locations h2 {
-    font: normal normal bold 1.5em Merriweather;
+    .our-locations h2:before {
+        top: 15px;
+        width: 100%;
+    }
 
-}
-
-.our-locations h2:before {
-    top: 15px;
-    width: 100%;
-}
-
-.cour-locations h2 span {
-    font: normal normal bold 1.2em Merriweather;
-    background: #fff;
-    padding: 0 5px;
-}
+    .cour-locations h2 span {
+        font: normal normal bold 1.2em Merriweather;
+        background: #fff;
+        padding: 0 5px;
+    }
 
     .our-locations .pagination-wrapper {
         margin-top: 25px;
+    }
+
+/* 
+MOBILE CONTACT SECTION
+ */
+
+    .mobile-contact-section {
+        display: block;
+        margin-bottom: 75px;
+    }
+
+    .mobile-contact-section h2 {
+        font: normal normal bold 2em Merriweather;
+        color: #374F5D;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        margin-bottom: 40px;
+    }
+    
+    .mobile-contact-section h2:before {
+        border-top: 2px solid #dfdfdf;
+        content: "";
+        margin: 0 auto;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 95%;
+        z-index: -1;
+    }
+    
+    .mobile-contact-section h2 span {
+        font: normal normal bold 1em Merriweather;
+        background: #fff;
+        padding: 0 15px;
+    }
+    
+    .mobile-contact-section h3 {
+        font: normal normal bold 1em Merriweather;
+    }
+
+    .mobile-contact-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mobile-contact-data a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .contact-email, .contact-tel {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .contact-tel {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .contact-email p, .contact-tel p{
+        margin: 0;
+        margin-top: 5px;
+        
     }
 
 }
