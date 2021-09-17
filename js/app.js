@@ -20,8 +20,13 @@ menu.addEventListener("click", function(){
 mobileMenu.addEventListener("touchstart", function(){
     if(mobileList.style.display === "block") {
         mobileList.style.display = "none";
+        // var i = document.querySelector(".mobile-menu-button").firstChild;
+        // i.classList.remve(fa fa-bars fa-2x);
+        // i.classList.add(fas fa-times fa2x);
     } else {
         mobileList.style.display = "block";
+        // i.classList.remve(fas fa-times fa-2x);
+        // i.classList.add(fa fa-bars fa-2x);
     }
 }) 
 

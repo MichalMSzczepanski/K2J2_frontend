@@ -141,53 +141,7 @@ MENU
     line-height: 2.5;
 }
 
-.mobile-menu-button {
-    text-align: right;
-    margin-top: 15px;
-}
 
-
-
-
-.mobile-list-menu {
-    height: 778px;
-    width: 390px;
-}
-
-.mobile-list-menu ul {
-    height: 778px;
-    width: 390px;
-    background: #374F5D;
-    border: #707070 1px;
-    z-index: inherit;
-}
-
-.mobile-list-menu ul li {
-    width: 148px;
-    height: 29px;
-    padding-top: 50px;
-    padding-left: 33px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    margin-right: 0;
-}
-
-.mobile-list-menu ul li span {
-    height: 778px;
-    width: 390px;
-
-}
-
-.mobile-text {
-    height: 778px;
-    width: 390px;
-    font: normal normal semibold Lato;
-    font-size: 24px;
-    text-align: left;
-    color: #fff;
-    text-decoration: none;
-    padding-top: 50px;
-}
 
 
 
@@ -620,7 +574,7 @@ XXXXXXXXXXXXXX MOBILE VERSION XXXXXXXXXXXXX
         width: 390px;
     }
 
-/* 
+    /* 
 NAVIGATION
  */
 
@@ -628,7 +582,7 @@ NAVIGATION
         display: none;
     }
 
-/* 
+    /* 
 MENU
  */
 
@@ -657,7 +611,53 @@ MENU
         color: #5BB7DE
     }
 
-/* 
+    .mobile-menu-button {
+        text-align: right;
+        margin-top: 15px;
+    }
+
+
+    .mobile-list-menu {
+        height: 778px;
+        width: 390px;
+    }
+
+    .mobile-list-menu ul {
+        height: 778px;
+        width: 390px;
+        background: #374F5D;
+        border: #707070 1px;
+        z-index: inherit;
+    }
+
+    .mobile-list-menu ul li {
+        width: 148px;
+        height: 29px;
+        padding-top: 50px;
+        padding-left: 33px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .mobile-list-menu ul li span {
+        height: 778px;
+        width: 390px;
+
+    }
+
+    .mobile-text {
+        height: 778px;
+        width: 390px;
+        font: normal normal semibold Lato;
+        font-size: 24px;
+        text-align: left;
+        color: #fff;
+        text-decoration: none;
+        padding-top: 50px;
+    }
+
+    /* 
 HEADER
  */
 
@@ -673,7 +673,7 @@ HEADER
         text-align: center;
     }
 
-<<<<<<< HEAD
+    <<<<<<< HEAD
     /* 
     .header .blue-btn {
 =======
@@ -756,7 +756,7 @@ CLINICAL TRIALS
         border-radius: 50%;
     }
 
-/* 
+    /* 
 ABOUT US
  */
 
@@ -769,8 +769,7 @@ ABOUT US
     }
 
     .about-us-description-mobile {
->>>>>>> aba0ce97d29a3370acd42b7464e37f01a68f4084
-        display: block;
+        >>>>>>>aba0ce97d29a3370acd42b7464e37f01a68f4084 display: block;
         margin-top: 2px;
         width: 85%;
     }
@@ -792,7 +791,7 @@ ABOUT US
         width: 90%;
     }
 
-/* 
+    /* 
 OUR LOCATIONS
  */
 
@@ -816,7 +815,7 @@ OUR LOCATIONS
         margin-top: 25px;
     }
 
-/* 
+    /* 
 MOBILE CONTACT SECTION
  */
 
@@ -833,7 +832,7 @@ MOBILE CONTACT SECTION
         z-index: 1;
         margin-bottom: 40px;
     }
-    
+
     .mobile-contact-section h2:before {
         border-top: 2px solid #dfdfdf;
         content: "";
@@ -846,13 +845,13 @@ MOBILE CONTACT SECTION
         width: 95%;
         z-index: -1;
     }
-    
+
     .mobile-contact-section h2 span {
         font: normal normal bold 1em Merriweather;
         background: #fff;
         padding: 0 15px;
     }
-    
+
     .mobile-contact-section h3 {
         font: normal normal bold 1em Merriweather;
     }
@@ -868,7 +867,8 @@ MOBILE CONTACT SECTION
         color: #000;
     }
 
-    .contact-email, .contact-tel {
+    .contact-email,
+    .contact-tel {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -880,10 +880,11 @@ MOBILE CONTACT SECTION
         margin-left: 10px;
     }
 
-    .contact-email p, .contact-tel p{
+    .contact-email p,
+    .contact-tel p {
         margin: 0;
         margin-top: 5px;
-        
+
     }
 
 }
