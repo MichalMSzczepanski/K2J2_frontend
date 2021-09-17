@@ -1,0 +1,310 @@
+* {
+    font-family: Lato;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1116px;
+}
+
+/* NAVIGATION */
+
+.nav {
+    height: 51px;
+    background: #374F5D;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav p {
+    color: #fff;
+}
+
+.nav-left {
+    width: 50%;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+}
+
+.nav-email {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-tel {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+
+.nav-email p,
+.nav-tel p {
+    margin: 0;
+}
+
+.nav-email:hover,
+.nav-tel:hover {
+    text-decoration: underline;
+}
+
+.nav-icon {
+    margin-right: 1em;
+}
+
+.separator {
+    align-self: center;
+    height: 45%;
+    border-right: #fff solid 1px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+/* MENU */
+
+.menu {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.menu-options {
+    width: 60%;
+}
+
+.menu-options ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.options-li {
+    justify-content: flex-start;
+    font-size: 17px;
+}
+
+.options-li:hover {
+    text-decoration: underline;
+}
+
+.blue-btn {
+    color: white;
+    font-weight: 900;
+    background: #5BB7DE 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    padding: 10px 25px;
+    opacity: 0.9;
+}
+
+.blue-btn:hover {
+    background-color: #374F5D;
+}
+
+
+.menu-languages {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+}
+
+.menu-languages-globe {
+    width: 23px;
+    height: 23px;
+    margin: 0 6px;
+}
+
+.menu-languages-copy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.menu-languages-copy-span {
+    font-size: 20px;
+}
+
+.menu-languages-arrow {
+    width: 20px;
+    height: 20px;
+    margin: 0 12px;
+}
+
+/* HEADER */
+
+.header {
+    background-image: url(/img/header.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 526px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+}
+
+.header h2 {
+    font: normal normal bold 24px/20px Lato;
+    color: #5BB7DE;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.header h1 {
+    font: normal normal bold 64px/68px Merriweather;
+    color: #374F5D;
+    line-height: 0.9em;
+    font-size: 4.5em;
+}
+
+/* BADANIA KLINICZNE */
+
+/* solution for line behind copy http://jsfiddle.net/ericrasch/jAXXA */
+
+.badania-kliniczne h2 {
+    font: normal normal bold 2em Merriweather;
+    color: #374F5D;
+    margin-top: 35px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    margin-top:55px;
+}
+
+.badania-kliniczne h2:before {
+    border-top: 2px solid #dfdfdf;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    z-index: -1;
+}
+
+.badania-kliniczne h2 span {
+    font: normal normal bold 1em Merriweather;
+    background: #fff;
+    padding: 0 15px;
+}
+
+.badania {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.badanie-przyklad {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.badanie-przyklad-icon {
+    margin-left: 15px;
+    margin-right: 20px;
+    width: max-content;
+    height: auto;
+}
+
+.badanie-przyklad p {
+    font: normal normal bold 18px Merriweather;
+}
+
+.btn-more {
+    background-color: #5BB7DE;
+    border: none;
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    margin-left: 10px;
+    margin-right: 25px;
+    align-items: center;
+}
+
+.btn-more img {
+    width: 40px;
+    transform: rotate(90deg);
+}
+
+/* O NAS */
+
+/* NASZE PLACOWKI */
+
+/* FOOTER */
+
+.footer {
+    height: 60px;
+    background: #374F5D;
+    border-bottom: 10px solid #5BB7DE;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.footer-left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.footer-left p {
+    margin: 0;
+}
+
+.footer-right {
+    width: 50%;
+    height: 100%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.footer-social-icon {
+    width: 25px;
+    margin: 13px 5px 10px 5px;
+}
+
