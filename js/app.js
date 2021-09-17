@@ -1,6 +1,9 @@
 var menu = document.querySelector(".menu-languages-copy");
 var list = document.querySelector(".languages-list");
 
+var mobileMenu = document.querySelector(".mobile-menu");
+var mobileList = document.querySelector(".mobile-list-menu");
+
 var touchmove = document.querySelector("tu wpisać to co będzie do obsługiwania zdarzenia");
 const imageList = document.querySelectorAll(".site-example-img");
 // var forPatient = document.querySelector(".options-li");
@@ -13,6 +16,14 @@ menu.addEventListener("click", function(){
         list.style.display = "block";
     }
 })
+
+mobileMenu.addEventListener("touchstart", function(){
+    if(mobileList.style.display === "block") {
+        mobileList.style.display = "none";
+    } else {
+        mobileList.style.display = "block";
+    }
+}) 
 
 // DLA PACJENTA LISTA ROZWIJANA EVENT
 // forPatient.addEventListener("click", function(){
