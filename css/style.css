@@ -53,7 +53,6 @@
     justify-content: start;
 }
 
-
 .nav-email p,
 .nav-tel p {
     margin: 0;
@@ -159,12 +158,13 @@
     width: 20px;
     height: 20px;
     margin: 0 12px;
+    transform: rotate(180deg);
 }
 
 /* HEADER */
 
 .header {
-    background-image: url(/img/header.png);
+    background-image: url(../img/header.png);
     background-position: center;
     background-repeat: no-repeat;
     height: 526px;
@@ -195,7 +195,7 @@
 /* BACKGROUND GRAPHIC */
 
 .background-graphic {
-    background-image: url(/img/pattern.png);
+    background-image: url(../img/pattern.png);
     background-repeat: repeat;
 }
 
@@ -267,7 +267,13 @@
 
 .btn-more img {
     width: 40px;
-    transform: rotate(90deg);
+}
+
+.trial-arrow {
+    width: 20px;
+    height: 20px;
+    margin: 0 12px;
+    padding-left:5px;
 }
 
 /* ABOUT US */
@@ -293,12 +299,13 @@
 .about-us-description h3 {
     font: normal normal bold 18px Lato;
     color: #5BB7DE;
-    border-bottom: 1px solid #374F5D;
+    border-bottom: 1px solid #dfdfdf;
     width: 100%;
 }
 
 .company-mention {
     font: normal normal bold 18px Merriweather;
+    color: #374F5D;
 }
 
 /* OUR LOCATIONS */
