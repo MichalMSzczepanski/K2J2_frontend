@@ -618,13 +618,17 @@ MENU
 
 
     .mobile-list-menu {
-        height: 778px;
-        width: 390px;
+        position: absolute;
+        left: 0px;
+        top: 61px;
+        z-index: +3;
+        height: 100%;
+        width: 100vw;
+        background: #374F5D;
+        border: #707070 1px;
     }
 
     .mobile-list-menu ul {
-        height: 778px;
-        width: 390px;
         background: #374F5D;
         border: #707070 1px;
         z-index: inherit;

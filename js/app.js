@@ -3,6 +3,10 @@ var list = document.querySelector(".languages-list");
 
 var mobileMenu = document.querySelector(".mobile-menu");
 var mobileList = document.querySelector(".mobile-list-menu");
+var clinicalTrials = document.querySelector(".clinical-trials");
+var aboutUs = document.querySelector(".about-us container");
+var location = document.querySelector(".our-locations container");
+var footer = document.querySelector(".footer");
 
 var touchmove = document.querySelector("tu wpisać to co będzie do obsługiwania zdarzenia");
 const imageList = document.querySelectorAll(".site-example-img");
@@ -17,18 +21,26 @@ menu.addEventListener("click", function(){
     }
 })
 
-mobileMenu.addEventListener("touchstart", function(){
-    if(mobileList.style.display === "block") {
-        mobileList.style.display = "none";
-        // var i = document.querySelector(".mobile-menu-button").firstChild;
-        // i.classList.remve(fa fa-bars fa-2x);
-        // i.classList.add(fas fa-times fa2x);
-    } else {
-        mobileList.style.display = "block";
-        // i.classList.remve(fas fa-times fa-2x);
-        // i.classList.add(fa fa-bars fa-2x);
-    }
-}) 
+// mobileMenu.addEventListener("touchstart", function(){
+//     if(mobileList.style.display === "block") {
+//         mobileList.style.display = "none";
+//         clinicalTrials.style.display = "block";
+//         aboutUs.style.display = "block";
+//         location.style.display = "block";
+//         footer.style.display = "block";
+        
+//         // var i = document.querySelector(".mobile-menu-button").firstChild;
+//         // i.classList.remve(fa fa-bars fa-2x);
+//         // i.classList.add(fas fa-times fa2x);
+//     } else {
+//         mobileList.style.display = "block";
+//         clinicalTrials.style.display = "none";
+//         aboutUs.style.display = "none";
+//         footer.style.display = "none";
+//         // i.classList.remve(fas fa-times fa-2x);
+//         // i.classList.add(fa fa-bars fa-2x);
+//     }
+// }) 
 
 // DLA PACJENTA LISTA ROZWIJANA EVENT
 // forPatient.addEventListener("click", function(){
