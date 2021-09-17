@@ -616,6 +616,16 @@ MENU
         margin-top: 15px;
     }
 
+    #menu-times {
+        display: none;
+        color: red;
+        text-align: right;
+        margin-top: 15px;
+        margin-right: 100px;
+        border: solid 1px green;
+        font-size: 60px;
+        z-index: +3;
+    }
 
     .mobile-list-menu {
         position: absolute;
@@ -637,11 +647,19 @@ MENU
     .mobile-list-menu ul li {
         width: 148px;
         height: 29px;
-        padding-top: 50px;
+        padding-top: 30px;
         padding-left: 33px;
         padding-right: 20px;
         padding-bottom: 10px;
         margin-right: 0;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid white;
+        padding-bottom: 40px;
+        margin-right: 30px;
+        margin-left: 30px;
+
     }
 
     .mobile-list-menu ul li span {
@@ -652,13 +670,34 @@ MENU
 
     .mobile-text {
         height: 778px;
-        width: 390px;
+        width: 490px;
         font: normal normal semibold Lato;
         font-size: 24px;
         text-align: left;
         color: #fff;
         text-decoration: none;
-        padding-top: 50px;
+
+    }
+
+    .mobile-list-menu ul li a {
+        display: inline-block;
+        width: 180px;
+
+
+    }
+
+    .footer-mobile {
+        margin-bottom: 0px;
+        position: absolute;
+        bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-text {
+        font: normal normal light Lato 10px;
+        color: #808080;
+        margin-left: 10px;
     }
 
     /* 
