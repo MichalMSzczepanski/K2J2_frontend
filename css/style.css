@@ -296,6 +296,10 @@ ul {
     font-size: 4.5em;
 }
 
+.header-btn {
+    display: none;
+}
+
 /* .header .blue-btn {
     display:none;
 } */
@@ -382,6 +386,10 @@ ul {
     height: 20px;
     margin: 0 12px;
     padding-left: 5px;
+}
+
+.pagination-wrapper {
+    display: none;
 }
 
 /* ABOUT US */
@@ -523,31 +531,38 @@ ul {
     margin: 13px 5px 10px 5px;
 }
 
+
+/* 
+
+XXXXXXXXXXXXXX MOBILE VERSION XXXXXXXXXXXXX
+
+*/
+
 @media only screen and (max-width: 995px) {
-    
+
     .container {
         width: 390px;
-        border: 1px solid red;
     }
 
-    /* NAVIGATION */
+/* NAVIGATION */
 
     .nav {
-        display:none;
+        display: none;
     }
 
-    /* MENU */
+/* MENU */
 
     .menu {
         height: 61px;
 
     }
 
-    .menu-options, .menu-languages {
+    .menu-options,
+    .menu-languages {
         display: none;
     }
 
-    .menu-logo img{
+    .menu-logo img {
         height: 40px;
     }
 
@@ -557,12 +572,12 @@ ul {
         margin-bottom: auto;
     }
 
-    .mobile-hamburger i{
+    .mobile-hamburger i {
         height: 25px;
         color: #5BB7DE
     }
 
-    /* HEADER */
+/* HEADER */
 
     .header-content {
         display: flex;
@@ -575,9 +590,139 @@ ul {
         line-height: 1em;
         text-align: center;
     }
-/* 
-    .header .blue-btn {
+
+    .header-btn {
         display: block;
-    } */
+        color: white;
+        font-weight: 900;
+        background: #5BB7DE 0% 0% no-repeat padding-box;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 25px;
+        opacity: 0.9;
+        width: 50%;
+        margin-top: 35px;
+        font-size: 1.2em;
+    }
+
+
+/* CLINICAL TRIALS */
+
+
+    .clinical-trials h2 {
+        font: normal normal bold 1.5em Merriweather;
 
     }
+
+    .clinical-trials h2:before {
+        top: 15px;
+        width: 100%;
+    }
+
+    .clinical-trials h2 span {
+        font: normal normal bold 1.2em Merriweather;
+        background: #fff;
+        padding: 0 5px;
+    }
+
+    .trials {
+        grid-template-columns: 1fr;
+    }
+
+    .trial-example {
+        align-self: center;
+        justify-self: center;
+    }
+
+    .pagination-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .pagination {
+        position: relative;
+    }
+
+    .pagination span {
+        margin: 0 7px;
+        position: relative;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        
+    }
+
+    .pagination span.active {
+        border: 2px solid #000;
+    }
+
+    .pagination span:before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        right: 3px;
+        bottom: 3px;
+        background: #5BB7DE;
+        border-radius: 50%;
+    }
+
+/* ABOUT US */
+
+    .about-us {
+        flex-direction: column;        
+    }
+
+    .about-us-description {
+        display: none;
+    }
+
+    .about-us-description-mobile {
+        margin-top: 2px;
+        width: 85%;
+    }
+
+    .about-us-description-mobile h3 {
+        font: normal normal bold 18px Lato;
+        color: #5BB7DE;
+        border-bottom: none;
+        width: 100%;
+    }
+
+    .map {
+        margin-top: 20px;
+        min-width: 95%;
+        margin-left: 35px;
+    }
+
+    .map img {
+        width: 90%;
+    }
+
+    * OUR LOCATIONS */
+
+
+/* OUR LOCATIONS */
+
+.our-locations h2 {
+    font: normal normal bold 1.5em Merriweather;
+
+}
+
+.our-locations h2:before {
+    top: 15px;
+    width: 100%;
+}
+
+.cour-locations h2 span {
+    font: normal normal bold 1.2em Merriweather;
+    background: #fff;
+    padding: 0 5px;
+}
+
+    .our-locations .pagination-wrapper {
+        margin-top: 25px;
+    }
+
+}
