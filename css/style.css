@@ -134,12 +134,13 @@
     padding-bottom: 15px;
     margin: 0;
     padding: 0;
-
+    line-height: 2.5;
 }
 
+
 .languages-list {
-    width: 115pt;
-    height: 120pt;
+    width: 110px;
+    height: 160px;
     position: relative;
     display: none;
 }
@@ -163,12 +164,52 @@
 
 .languages-list ul li a img {
     display: inline-block;
-    width: 24pt;
-    height: 16pt;
+    width: 23pt;
+    height: 15pt;
 }
 
+.patient-option {
+    text-decoration: none;
+    font: normal normal semibold 28px/22px Lato;
+    color: #374F5D;
+    padding-bottom: 15px;
+    margin: 0;
+    padding: 0;
 
+}
 
+ol {
+    list-style: none;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    display: inline-flexbox;
+}
+
+.patient-list {
+    width: 115pt;
+    height: 120pt;
+    position: relative;
+    display: none;
+}
+
+.patient-list ol li {
+    position: relative;
+
+}
+
+.patient-list ol li a {
+    text-decoration: none;
+    display: block;
+    background: #fff;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.patient-list ol li a:hover,
+.patient-list ol li a.active {
+    background: #a2a9ad;
+}
 
 
 ul {
