@@ -60,26 +60,65 @@ window.addEventListener("DOMContentLoaded", (event) => {
 //         forPatientList.style.display = "block";
 //     }
 // })
+// var menu = document.querySelector(".menu-languages-copy");
+// var list = document.querySelector(".languages-list");
 
+// var mobileMenu = document.querySelector(".mobile-menu");
+// var mobileList = document.querySelector(".mobile-list-menu");
 
-// EVENT -> przesunięcie obrazka
-// let imageIndex = 0;
+// var touchmove = document.querySelector("tu wpisać to co będzie do obsługiwania zdarzenia");
+// const imageList = document.querySelectorAll(".site-example-img");
+// // var forPatient = document.querySelector(".options-li");
+// // var forPatientList = document.querySelector(".for-patient");
 
-// imageList[imageIndex].className = "visible";
-
-// touchmove.addEventListener("touchmove", function (event) {
-//     console.log("przesuwanko");
-//     if (imageIndex < imageList.length - 1) {
-//         imageList[imageIndex].classList.remove("visible");
-//         imageList[imageIndex+1].className = "visible";
-//         imageIndex = imageIndex + 1;
+// menu.addEventListener("click", function(){
+//     if(list.style.display === "block") {
+//         list.style.display = "none";
 //     } else {
-//         imageList[imageIndex].classList.remove("visible");
-//         imageList[0].className = "visible";
-//         imageIndex = 0;
+//         list.style.display = "block";
 //     }
+// })
+
+// mobileMenu.addEventListener("touchstart", function(){
+//     if(mobileList.style.display === "block") {
+//         mobileList.style.display = "none";
+//     } else {
+//         mobileList.style.display = "block";
+//     }
+<<<<<<< HEAD
 // });
 });
 
 
 
+=======
+// }) 
+
+// // DLA PACJENTA LISTA ROZWIJANA EVENT
+// // forPatient.addEventListener("click", function(){
+// //     if(forPatientList.style.display === "block") {
+// //         forPatientList.style.display = "none";
+// //     } else {
+// //         forPatientList.style.display = "block";
+// //     }
+// // })
+
+
+// // EVENT -> przesunięcie obrazka
+// // let imageIndex = 0;
+
+// // imageList[imageIndex].className = "visible";
+
+// // touchmove.addEventListener("touchmove", function (event) {
+// //     console.log("przesuwanko");
+// //     if (imageIndex < imageList.length - 1) {
+// //         imageList[imageIndex].classList.remove("visible");
+// //         imageList[imageIndex+1].className = "visible";
+// //         imageIndex = imageIndex + 1;
+// //     } else {
+// //         imageList[imageIndex].classList.remove("visible");
+// //         imageList[0].className = "visible";
+// //         imageIndex = 0;
+// //     }
+// // });
+>>>>>>> temp commit w zwiazkuz konfliktem
