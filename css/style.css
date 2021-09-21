@@ -616,7 +616,6 @@ MENU
         margin-top: 15px;
     }
 
-<<<<<<< HEAD
     #menu-times {
         display: none;
         color: red;
@@ -628,8 +627,6 @@ MENU
         z-index: +3;
     }
 
-=======
->>>>>>> temp commit w zwiazkuz konfliktem
     .mobile-list-menu {
         position: absolute;
         left: 0px;
@@ -719,6 +716,10 @@ HEADER
         text-align: center;
     }
 
+    <<<<<<< HEAD
+    /* 
+    .header .blue-btn {
+=======
     .header-btn {
         display: block;
         color: white;
@@ -732,6 +733,7 @@ HEADER
         margin-top: 35px;
         font-size: 1.2em;
     }
+
 
 /* 
 CLINICAL TRIALS
