@@ -52,6 +52,99 @@ window.addEventListener("DOMContentLoaded", (event) => {
         }
     })
 
+/* 
+CLINICAL TRIALS - MOBILE
+ */
+
+
+// ROTATOR
+
+var clinicalTrialsPaginationLeftColumnElements = document.querySelectorAll(".left-column");
+var clinicalTrialsPaginationRightColumnElements = document.querySelectorAll(".right-column");
+var clinicalTrialsPaginationFirstPage = document.querySelector(".first-page");
+var clinicalTrialsPaginationSecondPage = document.querySelector(".second-page");
+
+clinicalTrialsPaginationFirstPage.addEventListener("click", function(){
+    for (var i = 0, max = clinicalTrialsPaginationRightColumnElements.length; i < max; i++) {
+        clinicalTrialsPaginationRightColumnElements[i].style.display = 'none';
+        clinicalTrialsPaginationLeftColumnElements[i].style.display = "flex";         
+    } 
+    clinicalTrialsPaginationFirstPage.classList.add("active")
+    clinicalTrialsPaginationSecondPage.classList.remove("active");
+})
+
+clinicalTrialsPaginationSecondPage.addEventListener("click", function(){
+    for (var i = 0, max = clinicalTrialsPaginationLeftColumnElements.length; i < max; i++) {
+       
+            clinicalTrialsPaginationLeftColumnElements[i].style.display = "none";
+            clinicalTrialsPaginationRightColumnElements[i].style.display = "flex";
+            if (!clinicalTrialsPaginationSecondPage.classList.contains("active")) {
+                clinicalTrialsPaginationSecondPage.classList.add("active")
+            }
+            clinicalTrialsPaginationFirstPage.classList.remove("active");
+    } 
+})
+
+
+/* 
+OUR LOCATIONS - MOBILE
+ */
+
+
+// ROTATOR
+var czestochowa = document.querySelector(".czestochowa");
+var czestochowaSection = document.querySelector(".czestochowa-section");
+var wlodawa = document.querySelector(".wlodawa");
+var wlodawaSection = document.querySelector(".wlodawa-section");
+var krakow = document.querySelector(".krakow");
+var krakowSection = document.querySelector(".krakow-section");
+var wolomin = document.querySelector(".wolomin");
+var wolominSection = document.querySelector(".wolomin-section");
+
+czestochowa.addEventListener("click", function(){
+    czestochowa.classList.add("active");
+    czestochowaSection.style.display = "grid";
+    wlodawa.classList.remove("active");
+    wlodawaSection.style.display = "none";
+    krakow.classList.remove("active");
+    krakowSection.style.display = "none";
+    wolomin.classList.remove("active");
+    wolominSection.style.display = "none";
+})
+
+wlodawa.addEventListener("click", function(){
+    czestochowa.classList.remove("active");
+    czestochowaSection.style.display = "none";
+    wlodawa.classList.add("active");
+    wlodawaSection.style.display = "grid";
+    krakow.classList.remove("active");
+    krakowSection.style.display = "none";
+    wolomin.classList.remove("active");
+    wolominSection.style.display = "none";
+})
+
+krakow.addEventListener("click", function(){
+    czestochowa.classList.remove("active");
+    czestochowaSection.style.display = "none";
+    wlodawa.classList.remove("active");
+    wlodawaSection.style.display = "none";
+    krakow.classList.add("active");
+    krakowSection.style.display = "grid";
+    wolomin.classList.remove("active");
+    wolominSection.style.display = "none";
+})
+
+wolomin.addEventListener("click", function(){
+    czestochowa.classList.remove("active");
+    czestochowaSection.style.display = "none";
+    wlodawa.classList.remove("active");
+    wlodawaSection.style.display = "none";
+    krakow.classList.remove("active");
+    krakowSection.style.display = "none";
+    wolomin.classList.add("active");
+    wolominSection.style.display = "grid";
+})
+
 // DLA PACJENTA LISTA ROZWIJANA EVENT
 // forPatient.addEventListener("click", function(){
 //     if(forPatientList.style.display === "block") {
