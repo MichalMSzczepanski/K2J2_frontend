@@ -2,13 +2,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
     var menu = document.querySelector(".menu-languages-copy");
     var list = document.querySelector(".languages-list");
 
-    var mobileMenu = document.querySelector(".mobile-menu");
+    var mobileMenu = document.querySelector(".mobile-menu-button");
     var mobileList = document.querySelector(".mobile-list-menu");
     var clinicalTrials = document.querySelector(".clinical-trials");
     var aboutUs = document.querySelector(".about-us");
     var location = document.querySelector(".our-locations");
     var mobileContact = document.querySelector(".mobile-contact-section");
     var footer = document.querySelector(".footer");
+    var header = document.querySelector(".header");
+    var background = document.querySelector(".background-graphic");
     var iBar = document.querySelector("#menu-bar");
     var iTimes = document.querySelector("#menu-times");
 
@@ -17,6 +19,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 // var forPatient = document.querySelector(".options-li");
 // var forPatientList = document.querySelector(".for-patient");
 
+    // rozwijanie menu dla języków
     menu.addEventListener("click", function(){
         if(list.style.display === "block") {
             list.style.display = "none";
@@ -27,6 +30,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     mobileList.style.display = "none";
 
+    // podczas rozwijania menu na mobile wszystko ukrywa się
     mobileMenu.addEventListener("touchstart", function(){
         if(mobileList.style.display === "block") {
             mobileList.style.display = "none";
@@ -34,19 +38,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
             aboutUs.style.display = "block";
             location.style.display = "block";
             footer.style.display = "block";
+            header.style.display = "block";
             mobileContact.style.display = "block";
-            // iTimes.style.display = "none";
-            // iBar.style.display = "block";
+            background.style.display = "block";
+            iTimes.style.display = "none";
+            iBar.style.display = "flex";
 
         } else {
             mobileList.style.display = "block";
             clinicalTrials.style.display = "none";
             aboutUs.style.display = "none";
             footer.style.display = "none";
+            header.style.display = "none";
             mobileContact.style.display = "none";
             location.style.display = "none";
-            // iTimes.style.display = "block";
-            // iBar.style.display = "none";
+            background.style.display = "none";
+            iTimes.style.display = "flex";
+            iBar.style.display = "none";
 
 
         }
