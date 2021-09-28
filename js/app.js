@@ -60,9 +60,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
         }
     })
 
- /* 
+ /*
 HEADER
- */   
+ */
 
 // H1 REVEAL ANIMATION
 
@@ -85,7 +85,7 @@ sr.reveal('.header-btn', {
 });
 
 
-/* 
+/*
 CLINICAL TRIALS - MOBILE
  */
 
@@ -100,26 +100,26 @@ var clinicalTrialsPaginationSecondPage = document.querySelector(".second-page");
 clinicalTrialsPaginationFirstPage.addEventListener("click", function(){
     for (var i = 0, max = clinicalTrialsPaginationRightColumnElements.length; i < max; i++) {
         clinicalTrialsPaginationRightColumnElements[i].style.display = 'none';
-        clinicalTrialsPaginationLeftColumnElements[i].style.display = "flex";         
-    } 
+        clinicalTrialsPaginationLeftColumnElements[i].style.display = "flex";
+    }
     clinicalTrialsPaginationFirstPage.classList.add("active")
     clinicalTrialsPaginationSecondPage.classList.remove("active");
 })
 
 clinicalTrialsPaginationSecondPage.addEventListener("click", function(){
     for (var i = 0, max = clinicalTrialsPaginationLeftColumnElements.length; i < max; i++) {
-       
+
             clinicalTrialsPaginationLeftColumnElements[i].style.display = "none";
             clinicalTrialsPaginationRightColumnElements[i].style.display = "flex";
             if (!clinicalTrialsPaginationSecondPage.classList.contains("active")) {
                 clinicalTrialsPaginationSecondPage.classList.add("active")
             }
             clinicalTrialsPaginationFirstPage.classList.remove("active");
-    } 
+    }
 })
 
 
-/* 
+/*
 OUR LOCATIONS - MOBILE
  */
 
