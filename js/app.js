@@ -52,6 +52,18 @@ window.addEventListener("DOMContentLoaded", (event) => {
         }
     })
 
+ /* 
+HEADER
+ */   
+
+// H1 ANIMATION
+
+// var headline = document.querySelector("#headline");
+
+// window.addEventListener('DOMContentLoaded', function () {
+//     headline.classList.toggle("fade-in");
+//     });
+
 /* 
 CLINICAL TRIALS - MOBILE
  */
