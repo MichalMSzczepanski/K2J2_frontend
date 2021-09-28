@@ -56,13 +56,26 @@ window.addEventListener("DOMContentLoaded", (event) => {
 HEADER
  */   
 
-// H1 ANIMATION
+// H1 REVEAL ANIMATION
 
-// var headline = document.querySelector("#headline");
+window.sr = ScrollReveal();
+    sr.reveal('.master-header', {
+        reset: true,
+        delay: 300,
+        duration: 3000,
+        distance: 0
+    });
 
-// window.addEventListener('DOMContentLoaded', function () {
-//     headline.classList.toggle("fade-in");
-//     });
+// MOBILE HEADER BUTTON REVEAL ANIMATION
+
+window.sr = ScrollReveal();
+sr.reveal('.header-btn', {
+    reset: true,
+    delay: 1500,
+    duration: 1500,
+    distance: 0
+});
+
 
 /* 
 CLINICAL TRIALS - MOBILE
