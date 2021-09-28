@@ -621,6 +621,7 @@ MENU
         z-index: +3;
         width: 100vw;
         background: #374F5D;
+        display: none;
     }
 
     #menu-times {

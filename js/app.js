@@ -19,20 +19,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
 // var forPatient = document.querySelector(".options-li");
 // var forPatientList = document.querySelector(".for-patient");
 
-    // rozwijanie menu dla języków
-    menu.addEventListener("click", function(){
-        if(list.style.display === "block") {
+    // LANGUAGEs MENU
+    menu.addEventListener("click", function () {
+        if (list.style.display === "block") {
             list.style.display = "none";
         } else {
             list.style.display = "block";
         }
     })
 
-    mobileList.style.display = "none";
 
-    // podczas rozwijania menu na mobile wszystko ukrywa się
-    mobileMenu.addEventListener("touchstart", function(){
-        if(mobileList.style.display === "block") {
+    // MOBILE USER MENU
+    mobileMenu.addEventListener("touchstart", function () {
+        if (mobileList.style.display === "block") {
             mobileList.style.display = "none";
             clinicalTrials.style.display = "block";
             aboutUs.style.display = "block";
@@ -60,13 +59,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
         }
     })
 
- /*
-HEADER
- */
+    /*
+   HEADER
+    */
 
 // H1 REVEAL ANIMATION
 
-window.sr = ScrollReveal();
+    window.sr = ScrollReveal();
     sr.reveal('.master-header', {
         reset: true,
         delay: 300,
@@ -76,38 +75,38 @@ window.sr = ScrollReveal();
 
 // MOBILE HEADER BUTTON REVEAL ANIMATION
 
-window.sr = ScrollReveal();
-sr.reveal('.header-btn', {
-    reset: true,
-    delay: 1500,
-    duration: 1500,
-    distance: 0
-});
+    window.sr = ScrollReveal();
+    sr.reveal('.header-btn', {
+        reset: true,
+        delay: 1500,
+        duration: 1500,
+        distance: 0
+    });
 
 
-/*
-CLINICAL TRIALS - MOBILE
- */
+    /*
+    CLINICAL TRIALS - MOBILE
+     */
 
 
 // ROTATOR
 
-var clinicalTrialsPaginationLeftColumnElements = document.querySelectorAll(".left-column");
-var clinicalTrialsPaginationRightColumnElements = document.querySelectorAll(".right-column");
-var clinicalTrialsPaginationFirstPage = document.querySelector(".first-page");
-var clinicalTrialsPaginationSecondPage = document.querySelector(".second-page");
+    var clinicalTrialsPaginationLeftColumnElements = document.querySelectorAll(".left-column");
+    var clinicalTrialsPaginationRightColumnElements = document.querySelectorAll(".right-column");
+    var clinicalTrialsPaginationFirstPage = document.querySelector(".first-page");
+    var clinicalTrialsPaginationSecondPage = document.querySelector(".second-page");
 
-clinicalTrialsPaginationFirstPage.addEventListener("click", function(){
-    for (var i = 0, max = clinicalTrialsPaginationRightColumnElements.length; i < max; i++) {
-        clinicalTrialsPaginationRightColumnElements[i].style.display = 'none';
-        clinicalTrialsPaginationLeftColumnElements[i].style.display = "flex";
-    }
-    clinicalTrialsPaginationFirstPage.classList.add("active")
-    clinicalTrialsPaginationSecondPage.classList.remove("active");
-})
+    clinicalTrialsPaginationFirstPage.addEventListener("click", function () {
+        for (var i = 0, max = clinicalTrialsPaginationRightColumnElements.length; i < max; i++) {
+            clinicalTrialsPaginationRightColumnElements[i].style.display = 'none';
+            clinicalTrialsPaginationLeftColumnElements[i].style.display = "flex";
+        }
+        clinicalTrialsPaginationFirstPage.classList.add("active")
+        clinicalTrialsPaginationSecondPage.classList.remove("active");
+    })
 
-clinicalTrialsPaginationSecondPage.addEventListener("click", function(){
-    for (var i = 0, max = clinicalTrialsPaginationLeftColumnElements.length; i < max; i++) {
+    clinicalTrialsPaginationSecondPage.addEventListener("click", function () {
+        for (var i = 0, max = clinicalTrialsPaginationLeftColumnElements.length; i < max; i++) {
 
             clinicalTrialsPaginationLeftColumnElements[i].style.display = "none";
             clinicalTrialsPaginationRightColumnElements[i].style.display = "flex";
@@ -115,68 +114,42 @@ clinicalTrialsPaginationSecondPage.addEventListener("click", function(){
                 clinicalTrialsPaginationSecondPage.classList.add("active")
             }
             clinicalTrialsPaginationFirstPage.classList.remove("active");
-    }
-})
+        }
+    })
 
 
-/*
-OUR LOCATIONS - MOBILE
- */
+    /*
+    OUR LOCATIONS - MOBILE
+     */
 
 
 // ROTATOR
-var czestochowa = document.querySelector(".czestochowa");
-var czestochowaSection = document.querySelector(".czestochowa-section");
-var wlodawa = document.querySelector(".wlodawa");
-var wlodawaSection = document.querySelector(".wlodawa-section");
-var krakow = document.querySelector(".krakow");
-var krakowSection = document.querySelector(".krakow-section");
-var wolomin = document.querySelector(".wolomin");
-var wolominSection = document.querySelector(".wolomin-section");
+    var paginationCity = document.querySelectorAll(".pagination-city");
+    var rotationCity = document.querySelectorAll(".rotation-city");
 
-czestochowa.addEventListener("click", function(){
-    czestochowa.classList.add("active");
-    czestochowaSection.style.display = "grid";
-    wlodawa.classList.remove("active");
-    wlodawaSection.style.display = "none";
-    krakow.classList.remove("active");
-    krakowSection.style.display = "none";
-    wolomin.classList.remove("active");
-    wolominSection.style.display = "none";
-})
+    // zamiana psudotablicy na tablicę w celu otrzymania indeksu
+    var paginationTab = Array.from(paginationCity);
+    var rotationTab = Array.from(rotationCity);
 
-wlodawa.addEventListener("click", function(){
-    czestochowa.classList.remove("active");
-    czestochowaSection.style.display = "none";
-    wlodawa.classList.add("active");
-    wlodawaSection.style.display = "grid";
-    krakow.classList.remove("active");
-    krakowSection.style.display = "none";
-    wolomin.classList.remove("active");
-    wolominSection.style.display = "none";
-})
-
-krakow.addEventListener("click", function(){
-    czestochowa.classList.remove("active");
-    czestochowaSection.style.display = "none";
-    wlodawa.classList.remove("active");
-    wlodawaSection.style.display = "none";
-    krakow.classList.add("active");
-    krakowSection.style.display = "grid";
-    wolomin.classList.remove("active");
-    wolominSection.style.display = "none";
-})
-
-wolomin.addEventListener("click", function(){
-    czestochowa.classList.remove("active");
-    czestochowaSection.style.display = "none";
-    wlodawa.classList.remove("active");
-    wlodawaSection.style.display = "none";
-    krakow.classList.remove("active");
-    krakowSection.style.display = "none";
-    wolomin.classList.add("active");
-    wolominSection.style.display = "grid";
-})
+    paginationCity.forEach(pagCity => {
+        pagCity.addEventListener("click", function () {
+            var index = paginationTab.indexOf(pagCity);
+            paginationCity.forEach(rotate => {
+                if (pagCity === rotate) {
+                    paginationCity[index].classList.add("active");
+                } else {
+                    rotate.classList.remove("active");
+                }
+            })
+            rotationCity.forEach(city => {
+                if (rotationTab.indexOf(city) === index) {
+                    rotationCity[index].style.display = "grid";
+                } else {
+                    city.style.display = "none";
+                }
+            })
+        })
+    })
 
 // DLA PACJENTA LISTA ROZWIJANA EVENT
 // forPatient.addEventListener("click", function(){
