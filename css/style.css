@@ -602,33 +602,18 @@ MENU
         margin-bottom: auto;
     }
 
-    .mobile-hamburger i {
-        height: 25px;
-        color: #5BB7DE;
-        border: 1px solid purple;
-    }
-
     .mobile-menu-button {
         text-align: right;
+        width: 40px;
         margin-top: 15px;
         border: 1px solid blue;
     }
 
     .mobile-menu-button img {
-        width: 10%;
+        /*width: 10%;*/
+        width: 30px;
         z-index: +4;
     }
-
-    /*#menu-times {*/
-    /*    !*display: none;*!*/
-    /*    color: red;*/
-    /*    text-align: right;*/
-    /*    margin-top: 15px;*/
-    /*    margin-right: 100px;*/
-    /*    border: solid 1px green;*/
-    /*    font-size: 60px;*/
-    /*    z-index: +4;*/
-    /*}*/
 
     .mobile-list-menu {
         position: absolute;
@@ -642,10 +627,9 @@ MENU
         border: #707070 1px;
     }
 
-    /*.mobile-menu {*/
-    /*    height: 100%;*/
-    /*    width: 100vw;*/
-    /*}*/
+    #menu-times {
+        display: none;
+    }
 
     .mobile-list-menu ul {
         background: #374F5D;
