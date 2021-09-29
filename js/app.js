@@ -91,11 +91,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
 // ROTATOR - badania
-
+// click
     var clinicalTrialsPaginationLeftColumnElements = document.querySelectorAll(".left-column");
     var clinicalTrialsPaginationRightColumnElements = document.querySelectorAll(".right-column");
     var clinicalTrialsPaginationFirstPage = document.querySelector(".first-page");
     var clinicalTrialsPaginationSecondPage = document.querySelector(".second-page");
+    var clinicalTrials = document.querySelector(".clinical-trials");
 
     clinicalTrialsPaginationFirstPage.addEventListener("click", function () {
         for (var i = 0, max = clinicalTrialsPaginationRightColumnElements.length; i < max; i++) {
@@ -117,6 +118,59 @@ window.addEventListener("DOMContentLoaded", (event) => {
             clinicalTrialsPaginationFirstPage.classList.remove("active");
         }
     })
+// touchmove
+
+    clinicalTrials.addEventListener("touchmove", function (event) {
+        console.log("klik");
+        clinicalTrialsPaginationRightColumnElements.forEach(right => {
+            if (right.style.display === "none") {
+                right.style.display = "flex";
+                clinicalTrialsPaginationLeftColumnElements.forEach(left => {
+                    left.style.display = "none";
+                })
+                clinicalTrialsPaginationFirstPage.classList.remove("active");
+                clinicalTrialsPaginationSecondPage.classList.add("active")
+            } else {
+                right.style.display = "none"
+                clinicalTrialsPaginationLeftColumnElements.forEach(left => {
+                    left.style.display = "flex";
+                })
+                clinicalTrialsPaginationSecondPage.classList.remove("active");
+                clinicalTrialsPaginationFirstPage.classList.add("active")
+            }
+        })
+
+    })
+
+
+
+//     let trialIndex = 0;
+//
+//     location.addEventListener("touchmove", function (event) {
+//         rotationTab[imageIndex].classList.add("visible");
+//         if (imageIndex < rotationCity.length - 1) {
+//             rotationCity[imageIndex].className = ("hidden");
+//             rotationCity[imageIndex].style.display= ("none");
+//             rotationCity[imageIndex + 1].className = ("visible");
+//             rotationCity[imageIndex + 1].style.display= ("grid");
+//             imageIndex = imageIndex + 1;
+//             paginationCity.forEach(rotate => {
+//                 if (paginationTab.indexOf(rotate) === imageIndex) {
+//
+//                     rotate.classList.add("active");
+//                 } else {
+//                     rotate.classList.remove("active");
+//                 }
+//             })
+//         } else {
+//             rotationCity[imageIndex].className = ("hidden");
+//             rotationCity[imageIndex].style.display= ("none");
+//             rotationCity[0].className = ("visible");
+//             rotationCity[0].style.display= ("grid");
+//             imageIndex = 0;
+//         }
+//
+//     })
 
 
     /*
