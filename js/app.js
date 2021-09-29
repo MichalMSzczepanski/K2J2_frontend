@@ -132,6 +132,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     var paginationTab = Array.from(paginationCity);
     var rotationTab = Array.from(rotationCity);
 
+    // tablice które przechowują klasy dla div obsługujących lokalizacje z obrazkami -> po usunieciu klas przez touchmove można je odzyskać
     var cityTab0;
     var cityTab1;
     var cityTab2;
