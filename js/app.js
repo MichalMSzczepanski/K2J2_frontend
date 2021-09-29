@@ -14,6 +14,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     var iBar = document.querySelector("#menu-bar");
     var iTimes = document.querySelector("#menu-times");
 
+    var locationsDiv = document.querySelector(".locations")
     var touchmove = document.querySelector("tu wpisać to co będzie do obsługiwania zdarzenia");
     const imageList = document.querySelectorAll(".site-example-img");
 // var forPatient = document.querySelector(".options-li");
@@ -89,7 +90,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
      */
 
 
-// ROTATOR
+// ROTATOR - badania
 
     var clinicalTrialsPaginationLeftColumnElements = document.querySelectorAll(".left-column");
     var clinicalTrialsPaginationRightColumnElements = document.querySelectorAll(".right-column");
@@ -123,13 +124,35 @@ window.addEventListener("DOMContentLoaded", (event) => {
      */
 
 
-// ROTATOR
+// ROTATOR -> lokalizacje
     var paginationCity = document.querySelectorAll(".pagination-city");
     var rotationCity = document.querySelectorAll(".rotation-city");
 
     // zamiana psudotablicy na tablicę w celu otrzymania indeksu
     var paginationTab = Array.from(paginationCity);
     var rotationTab = Array.from(rotationCity);
+
+    var cityTab0;
+    var cityTab1;
+    var cityTab2;
+    var cityTab3;
+
+    rotationTab.forEach(city => {
+        if (rotationTab.indexOf(city) === 0) {
+            var cityList0 = city.classList;
+            cityTab = Array.from(cityList0);
+        } else if (rotationTab.indexOf(city) === 1) {
+            var cityList1 = city.classList;
+            cityTab1 = Array.from(cityList1);
+        } else if (rotationTab.indexOf(city) === 2) {
+            var cityList2 = city.classList;
+            cityTab2 = Array.from(cityList2);
+        } else {
+            var cityList3 = city.classList;
+            cityTab3 = Array.from(cityList3);
+
+        }
+    })
 
     paginationCity.forEach(pagCity => {
         pagCity.addEventListener("click", function () {
@@ -142,6 +165,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 }
             })
             rotationCity.forEach(city => {
+                    if (rotationTab.indexOf(city) === 0) {
+                        city.classList = cityTab0;
+                    } else if (rotationTab.indexOf(city) === 1) {
+                        city.classList = cityTab1;
+                    } else if (rotationTab.indexOf(city) === 2) {
+                        city.classList = cityTab2;
+                    } else {
+                        city.classList = cityTab3;
+                    }
                 if (rotationTab.indexOf(city) === index) {
                     rotationCity[index].style.display = "grid";
                 } else {
@@ -149,7 +181,40 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 }
             })
         })
+
     })
+
+
+    // EVENT -> przesunięcie obrazka
+
+    let imageIndex = 0;
+
+    location.addEventListener("touchmove", function (event) {
+        rotationTab[imageIndex].classList.add("visible");
+        if (imageIndex < rotationCity.length - 1) {
+            rotationCity[imageIndex].className = ("hidden");
+            rotationCity[imageIndex].style.display= ("none");
+            rotationCity[imageIndex + 1].className = ("visible");
+            rotationCity[imageIndex + 1].style.display= ("grid");
+            imageIndex = imageIndex + 1;
+            paginationCity.forEach(rotate => {
+                if (paginationTab.indexOf(rotate) === imageIndex) {
+
+                    rotate.classList.add("active");
+                } else {
+                    rotate.classList.remove("active");
+                }
+            })
+        } else {
+            rotationCity[imageIndex].className = ("hidden");
+            rotationCity[imageIndex].style.display= ("none");
+            rotationCity[0].className = ("visible");
+            rotationCity[0].style.display= ("grid");
+            imageIndex = 0;
+        }
+
+    })
+
 
 // DLA PACJENTA LISTA ROZWIJANA EVENT
 // forPatient.addEventListener("click", function(){
