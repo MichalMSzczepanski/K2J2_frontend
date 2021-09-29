@@ -141,7 +141,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     rotationTab.forEach(city => {
         if (rotationTab.indexOf(city) === 0) {
             var cityList0 = city.classList;
-            cityTab = Array.from(cityList0);
+            cityTab0 = Array.from(cityList0);
         } else if (rotationTab.indexOf(city) === 1) {
             var cityList1 = city.classList;
             cityTab1 = Array.from(cityList1);
